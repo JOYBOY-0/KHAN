@@ -13,8 +13,8 @@ export const CursorProvider = ({ children }) => {
     useEffect(() => {
       const handleMouseMove = (event) => {
         const { clientX, clientY } = event;
-        const followX = ((window.innerWidth - event.pageX)/100);
-        const followY = ((window.innerHeight - event.pageY)/100);
+        const followX = ((window.innerWidth - event.pageX)/90);
+        const followY = ((window.innerHeight - event.pageY)/90);
         setMousePosition({ x: clientX, y: clientY, followX : followX, followY : followY });
       };
       document.addEventListener("mousemove", handleMouseMove);

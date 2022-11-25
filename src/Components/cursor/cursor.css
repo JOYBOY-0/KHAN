@@ -1,0 +1,14 @@
+@keyframes waterDrop {
+    0% {
+      opacity: 1;
+      scale: .5;
+    }
+  
+    100% {
+        opacity: 0;
+        scale: 4;
+    }
+  }
+.cursor-waterDrop{
+    animation: 3s infinite waterDrop
+}

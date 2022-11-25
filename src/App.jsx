@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import Cursor from './Components/cursor/Cursor'
 import { useCursorContext } from './context/CursorContext'
 import { Hero } from './sections/hero/Hero'
+import { gsap } from "gsap";
 
 function App() {
   const [count, setCount] = useState(0)
