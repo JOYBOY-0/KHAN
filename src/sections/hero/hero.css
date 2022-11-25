@@ -1,0 +1,15 @@
+@keyframes pulseSmall {
+    0%, 100% {
+      opacity: 1;
+      scale: 1.15;
+    }
+  
+    50% {
+        opacity: .8;
+        scale: 1.155;
+    }
+  }
+.bg-pulse-small{
+    animation: 5s infinite alternate pulseSmall
+}
+
