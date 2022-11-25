@@ -1,5 +1,5 @@
 import { motion } from "framer-motion"
-import './cursor.css'
+import './cursor.scss'
 const Cursor = ({cursorVariant, x, y}) => {
 
   const pointerVariants = {
@@ -27,13 +27,7 @@ const Cursor = ({cursorVariant, x, y}) => {
   }
 
   const centerVariants = {
-    
-    // waterDrop: {
-    //   display: 'block',
-    //   width: 40,
-    //   height: 40
-      
-    // },
+
   }
 
   return(
@@ -44,13 +38,23 @@ const Cursor = ({cursorVariant, x, y}) => {
         animate={cursorVariant}
         variants={pointerVariants}
       >
-        <motion.div
-        className=" border-white w-6 h-6 cursor-waterDrop
-        border rounded-full pointer-events-none"
-        animate={cursorVariant}
-        variants={centerVariants}
-        />
+        {cursorVariant === 'waterDrop'  &&
+        <>      
+          <motion.div
+          className=" border-white w-6 h-6 cursor-waterDrop
+          border rounded-full pointer-events-none"
+          animate={cursorVariant}
+          variants={centerVariants}
+          />
 
+          <motion.div
+          className="absolute border-white w-16 h-16 cursor-waterDrop delay-500
+          border rounded-full pointer-events-none"
+          animate={cursorVariant}
+          variants={centerVariants}
+          />
+        </>
+        }
       </motion.div>
     </>
 
